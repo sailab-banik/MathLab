@@ -116,10 +116,7 @@ fun MainScreen() {
                         NotesScreen()
                     }
                 }
-
             }
         }
     }
-
-
 }

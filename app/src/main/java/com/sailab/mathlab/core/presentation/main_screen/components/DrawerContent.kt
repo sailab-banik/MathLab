@@ -22,8 +22,11 @@ fun DrawerContent(
             .fillMaxSize()
             .padding(20.dp)
     ) {
-        Text(text = "Mathlab",
-        modifier = Modifier.padding(20.dp))
+        Text(
+            text = "MathLab",
+            modifier = Modifier.padding(20.dp),
+            fontSize = 16.sp
+        )
         Column(
             modifier = Modifier,
             horizontalAlignment = Alignment.CenterHorizontally
@@ -35,7 +38,10 @@ fun DrawerContent(
 
             Spacer(modifier = Modifier.weight(1f))
 
-            Text(text = "Version 1.0.0", fontSize = 16.sp)
+            Text(
+                text = "Version 1.0.0",
+                fontSize = 16.sp
+            )
         }
     }
 }
