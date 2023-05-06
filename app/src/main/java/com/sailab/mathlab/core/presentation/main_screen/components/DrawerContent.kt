@@ -20,16 +20,22 @@ fun DrawerContent(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(20.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+            .padding(20.dp)
     ) {
+        Text(text = "Mathlab",
+        modifier = Modifier.padding(20.dp))
+        Column(
+            modifier = Modifier,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
 
-        Spacer(modifier = Modifier.height(10.dp))
-        NavigationDrawerItems(navController,drawerState)
-        Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.height(10.dp))
 
+            NavigationDrawerItems(navController,drawerState)
 
-        Text(text = "Version 1.0.0", fontSize = 16.sp)
+            Spacer(modifier = Modifier.weight(1f))
 
+            Text(text = "Version 1.0.0", fontSize = 16.sp)
+        }
     }
 }

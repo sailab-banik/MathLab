@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Notes
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -49,7 +49,7 @@ fun MainScreen() {
                     scrollBehavior = scrollBehavior,
                     title = {
                         Text(
-                            text = "MathLab",
+                            text = "",
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -68,7 +68,7 @@ fun MainScreen() {
                             }
                         }) {
                             Icon(
-                                imageVector = Icons.Filled.Menu,
+                                imageVector = Icons.Filled.Notes,
                                 contentDescription = "Menu Icon"
                             )
                         }
