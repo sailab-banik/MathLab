@@ -1,6 +1,7 @@
 package com.sailab.mathlab.core.presentation.main_screen
 
 import android.annotation.SuppressLint
+import android.content.Context
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -15,6 +16,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.sailab.mathlab.core.service.NotificationService
 import com.sailab.mathlab.core.presentation.about.AboutScreen
 import com.sailab.mathlab.core.presentation.main_screen.components.DrawerContent
 import com.sailab.mathlab.core.presentation.main_screen.components.Screens
@@ -30,11 +32,14 @@ import kotlinx.coroutines.launch
 @ExperimentalMaterial3Api
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun MainScreen() {
+fun MainScreen(
+    context: Context
+) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
     val navController = rememberNavController()
+    val service = NotificationService(context)
 
     ModalNavigationDrawer(
         drawerState = drawerState,
@@ -74,7 +79,9 @@ fun MainScreen() {
                         }
                     },
                     actions = {
-                        IconButton(onClick = { /* doSomething() */ }) {
+                        IconButton(onClick = {
+                            service.showNotification()
+                        }) {
                             Icon(
                                 imageVector = Icons.Filled.Notifications,
                                 contentDescription = "Notification Icon"
