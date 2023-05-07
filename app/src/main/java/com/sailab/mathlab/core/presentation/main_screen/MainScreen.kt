@@ -23,7 +23,7 @@ import com.sailab.mathlab.feature_calculator.presentation.calculator.ScientificC
 import com.sailab.mathlab.feature_draw.presentation.draw.DrawScreen
 import com.sailab.mathlab.feature_home.presentation.home.HomeScreen
 import com.sailab.mathlab.feature_notes.presentation.notes.NotesScreen
-import com.sailab.mathlab.feature_programmer_calculator.presentation.programmer.ProgrammerCalculator
+import com.sailab.mathlab.feature_programmer_calculator.presentation.programmer.CodingCalculator
 import com.sailab.mathlab.feature_scanner.presentation.scanner.ScannerScreen
 import kotlinx.coroutines.launch
 
@@ -92,7 +92,7 @@ fun MainScreen() {
                     startDestination = Screens.HomeScreen.route
                 ) {
                     composable(route = Screens.HomeScreen.route) {
-                        HomeScreen()
+                        HomeScreen(navController)
                     }
                     composable(route = Screens.GeneralCalculatorScreen.route) {
                         GeneralCalculator()
@@ -100,8 +100,8 @@ fun MainScreen() {
                     composable(route = Screens.ScientificCalculatorScreen.route) {
                         ScientificCalculator()
                     }
-                    composable(route = Screens.ProgrammerCalculatorScreen.route) {
-                        ProgrammerCalculator()
+                    composable(route = Screens.CodingCalculatorScreen.route) {
+                        CodingCalculator()
                     }
                     composable(route = Screens.ScannerScreen.route) {
                         ScannerScreen()

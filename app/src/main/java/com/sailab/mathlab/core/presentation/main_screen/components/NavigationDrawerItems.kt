@@ -120,11 +120,11 @@ fun NavigationDrawerItems(
                 contentDescription = "Programmer Calculator"
             )
         },
-        label = { Text(text = "Programmer Calculator") },
-        selected = destination?.route == Screens.ProgrammerCalculatorScreen.route,
+        label = { Text(text = "Coding Calculator") },
+        selected = destination?.route == Screens.CodingCalculatorScreen.route,
 
         onClick = {
-            navController.navigate(Screens.ProgrammerCalculatorScreen.route, navOptions {
+            navController.navigate(Screens.CodingCalculatorScreen.route, navOptions {
                 popUpTo(Screens.HomeScreen.route) {
                     saveState = true
                 }
@@ -172,7 +172,7 @@ fun NavigationDrawerItems(
     NavigationDrawerItem(
         icon = {
             Icon(
-                imageVector = Icons.Default.Gesture,
+                imageVector = Icons.Default.Draw,
                 contentDescription = "Draw"
             )
         },
@@ -200,7 +200,7 @@ fun NavigationDrawerItems(
     NavigationDrawerItem(
         icon = {
             Icon(
-                imageVector = Icons.Default.Note,
+                imageVector = Icons.Default.StickyNote2,
                 contentDescription = "Notes"
             )
         },
