@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notes
 import androidx.compose.material.icons.filled.Notifications
@@ -34,7 +35,8 @@ import kotlinx.coroutines.launch
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MainScreen(
-    context: Context
+    context: Context,
+    lazyListState: LazyListState
 ) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
@@ -104,7 +106,10 @@ fun MainScreen(
                     startDestination = Screens.HomeScreen.route
                 ) {
                     composable(route = Screens.HomeScreen.route) {
-                        HomeScreen(navController)
+                        HomeScreen(
+                            navController = navController,
+                            lazyListState = lazyListState
+                        )
                     }
                     composable(route = Screens.GeneralCalculatorScreen.route) {
                         GeneralCalculator()
