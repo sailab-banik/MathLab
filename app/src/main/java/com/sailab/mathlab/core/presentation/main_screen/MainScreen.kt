@@ -13,6 +13,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -41,6 +42,8 @@ fun MainScreen(
     val navController = rememberNavController()
     val service = NotificationService(context)
 
+    service.showNotification()
+
     ModalNavigationDrawer(
         drawerState = drawerState,
         drawerContent = {
@@ -51,6 +54,7 @@ fun MainScreen(
             modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
             topBar = {
                 SmallTopAppBar(
+                    modifier = Modifier.padding(horizontal = 2.dp),
                     scrollBehavior = scrollBehavior,
                     title = {
                         Text(
@@ -79,7 +83,8 @@ fun MainScreen(
                         }
                     },
                     actions = {
-                        IconButton(onClick = {
+                        IconButton(
+                            onClick = {
                             service.showNotification()
                         }) {
                             Icon(
