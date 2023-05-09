@@ -45,7 +45,9 @@ fun MathematiciansItem(
                     .clip(CircleShape)
             )
             Text(
-                modifier = Modifier.align(Alignment.BottomCenter),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(4.dp),
                 text = mathematicians.title,
                 fontSize = MaterialTheme.typography.labelSmall.fontSize,
                 fontWeight = FontWeight.Bold
