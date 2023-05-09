@@ -50,7 +50,7 @@ fun ToolsItem(
               )
           }
         },
-        colors = CardDefaults.cardColors(),
+        colors = CardDefaults.elevatedCardColors(),
         elevation = CardDefaults.cardElevation(
             defaultElevation = 4.dp,
             pressedElevation = 10.dp

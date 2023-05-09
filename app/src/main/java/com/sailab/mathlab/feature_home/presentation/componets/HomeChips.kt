@@ -23,7 +23,7 @@ fun HomeChips() {
             modifier = Modifier.padding(horizontal = 8.dp)
         ) {
             SuggestionChip(
-                label = { Text(text = "Sets") },
+                label = { Text(text = "Math") },
                 onClick = { /*TODO*/ }
             )
         }

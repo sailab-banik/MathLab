@@ -13,11 +13,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.sailab.mathlab.core.presentation.search.Search
 import com.sailab.mathlab.feature_home.domain.repository.HomeBooksRepository
+import com.sailab.mathlab.feature_home.domain.repository.MathematicianRepository
 import com.sailab.mathlab.feature_home.domain.repository.ToolsRepository
-import com.sailab.mathlab.feature_home.presentation.componets.HeadingText
-import com.sailab.mathlab.feature_home.presentation.componets.HomeBooksItem
-import com.sailab.mathlab.feature_home.presentation.componets.HomeChips
-import com.sailab.mathlab.feature_home.presentation.componets.ToolsItem
+import com.sailab.mathlab.feature_home.presentation.componets.*
 
 @ExperimentalMaterial3Api
 @Composable
@@ -28,9 +26,11 @@ fun HomeScreen(
 
     val toolsRepository = ToolsRepository()
     val booksRepository = HomeBooksRepository()
+    val mathematicianRepository = MathematicianRepository()
 
     val toolsData = toolsRepository.getToolsData()
     val booksData = booksRepository.getBooksData()
+    val mathematiciansData = mathematicianRepository.getMathematicianData()
 
     LazyColumn(
         content = {
@@ -73,6 +73,22 @@ fun HomeScreen(
                     content = {
                         items(items = booksData) {
                             HomeBooksItem(books = it)
+                        }
+                    }
+                )
+            }
+
+            item {
+                HeadingText(text = "Mathematicians")
+            }
+
+            item {
+                LazyRow(
+                    modifier = Modifier
+                        .padding(horizontal = 10.dp),
+                    content = {
+                        items(items = mathematiciansData) {
+                            MathematiciansItem(mathematicians = it)
                         }
                     }
                 )
