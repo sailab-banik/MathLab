@@ -25,7 +25,10 @@ fun Search() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(
+                horizontal = 12.dp,
+                vertical = 8.dp
+            )
     ) {
         val keyboardController = LocalSoftwareKeyboardController.current
         var text by remember {

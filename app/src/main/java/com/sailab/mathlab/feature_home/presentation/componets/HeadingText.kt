@@ -17,7 +17,7 @@ fun HeadingText(
         modifier = Modifier.padding(
             start = 20.dp,
             end = 20.dp,
-            top = 30.dp,
+            top = 20.dp,
             bottom = 15.dp
         ),
         fontWeight = FontWeight.Bold,
