@@ -1,69 +1,36 @@
 package com.sailab.mathlab.feature_calculator.presentation.general
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.material3.*
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.sailab.mathlab.core.presentation.main_screen.components.WindowInfo
-import com.sailab.mathlab.core.presentation.main_screen.components.rememberWindowInfo
 import com.sailab.mathlab.feature_calculator.data.repository.CalculatorViewModel
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorAction
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorOperation
 import com.sailab.mathlab.feature_calculator.presentation.components.CalculatorButton
+import com.sailab.mathlab.feature_calculator.presentation.components.CalculatorTextField
 
 @ExperimentalMaterial3Api
 @Composable
 fun GeneralCalculator() {
     val viewModel = viewModel<CalculatorViewModel>()
-    val state = viewModel.state
-
-    val windowInfo = rememberWindowInfo()
 
     Column(
         modifier = Modifier
             .fillMaxSize()
     ) {
-
-        ElevatedCard(
-            modifier = Modifier
-                .padding(
-                    horizontal = 20.dp,
-                    vertical = 10.dp
-                )
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .heightIn(
-                        min= if(windowInfo.screenWidthInfo is WindowInfo.WindowType.Compact) {
-                            220.dp
-                        } else {
-                               80.dp
-                        },
-                        max = 230.dp
-                    )
-            ) {
-                val text = state.number1 + (state.operation?.symbol ?: "") + state.number2
-                Text(
-                    modifier = Modifier
-                        .align(Alignment.BottomEnd)
-                        .padding(16.dp),
-                    text = text,
-                    fontSize = if(text.length < 17) {
-                        MaterialTheme.typography.headlineLarge.fontSize
-                    } else {
-                           MaterialTheme.typography.headlineMedium.fontSize
-                    },
-                    lineHeight = 32.sp
-                )
-            }
-        }
+        CalculatorTextField(
+            minHeight = 220.dp
+        )
 
         LazyVerticalGrid(
             columns = GridCells.Fixed(4),
