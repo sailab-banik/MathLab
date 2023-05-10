@@ -1,4 +1,4 @@
-package com.sailab.mathlab.core.presentation.search
+package com.sailab.mathlab.feature_home.presentation.componets
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth

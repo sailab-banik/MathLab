@@ -1,4 +1,4 @@
-package com.sailab.mathlab.feature_calculator.presentation.calculator
+package com.sailab.mathlab.feature_calculator.presentation.general
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

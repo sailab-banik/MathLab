@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.sailab.mathlab.core.presentation.search.Search
+import com.sailab.mathlab.feature_home.presentation.componets.Search
 import com.sailab.mathlab.feature_home.domain.repository.HomeBooksRepository
 import com.sailab.mathlab.feature_home.domain.repository.MathematicianRepository
 import com.sailab.mathlab.feature_home.domain.repository.ToolsRepository

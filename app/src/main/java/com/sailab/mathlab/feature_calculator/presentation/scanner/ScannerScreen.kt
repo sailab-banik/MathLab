@@ -1,4 +1,4 @@
-package com.sailab.mathlab.feature_calculator.presentation.calculator
+package com.sailab.mathlab.feature_calculator.presentation.scanner
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -8,11 +8,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun ScientificCalculator() {
+fun ScannerScreen() {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = "Scientific Calculator")
+        Text(text = "Scanner Calculator")
     }
 }

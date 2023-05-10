@@ -22,13 +22,13 @@ import com.sailab.mathlab.core.service.NotificationService
 import com.sailab.mathlab.core.presentation.about.AboutScreen
 import com.sailab.mathlab.core.presentation.main_screen.components.DrawerContent
 import com.sailab.mathlab.core.presentation.main_screen.components.Screens
-import com.sailab.mathlab.feature_calculator.presentation.calculator.GeneralCalculator
-import com.sailab.mathlab.feature_calculator.presentation.calculator.ScientificCalculator
+import com.sailab.mathlab.feature_calculator.presentation.general.GeneralCalculator
+import com.sailab.mathlab.feature_calculator.presentation.scientific.ScientificCalculator
 import com.sailab.mathlab.feature_draw.presentation.draw.DrawScreen
 import com.sailab.mathlab.feature_home.presentation.home.HomeScreen
 import com.sailab.mathlab.feature_notes.presentation.notes.NotesScreen
-import com.sailab.mathlab.feature_programmer_calculator.presentation.programmer.CodingCalculator
-import com.sailab.mathlab.feature_scanner.presentation.scanner.ScannerScreen
+import com.sailab.mathlab.feature_calculator.presentation.coding.CodingCalculator
+import com.sailab.mathlab.feature_calculator.presentation.scanner.ScannerScreen
 import kotlinx.coroutines.launch
 
 @ExperimentalMaterial3Api

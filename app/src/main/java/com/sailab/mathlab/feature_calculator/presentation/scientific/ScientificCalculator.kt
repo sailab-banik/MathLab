@@ -1,4 +1,4 @@
-package com.sailab.mathlab.feature_programmer_calculator.presentation.programmer
+package com.sailab.mathlab.feature_calculator.presentation.scientific
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -8,11 +8,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun CodingCalculator() {
+fun ScientificCalculator() {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = "Coding Calculator")
+        Text(text = "Scientific Calculator")
     }
 }
