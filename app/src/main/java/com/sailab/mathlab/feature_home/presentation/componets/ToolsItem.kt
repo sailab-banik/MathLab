@@ -37,8 +37,8 @@ fun ToolsItem(
                   Screens.CodingCalculatorScreen.route
               )
 
-              "Draw" -> navController.navigate(
-                  Screens.DrawScreen.route
+              "Converter" -> navController.navigate(
+                  Screens.ConverterScreen.route
               )
 
               "General Calculator" -> navController.navigate(

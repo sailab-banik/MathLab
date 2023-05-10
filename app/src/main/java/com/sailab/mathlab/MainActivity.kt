@@ -51,8 +51,6 @@ class MainActivity : ComponentActivity() {
                                     .apply()
                             }
                     }
-
-
                     MainScreen(
                         context = applicationContext,
                         lazyListState = lazyListState

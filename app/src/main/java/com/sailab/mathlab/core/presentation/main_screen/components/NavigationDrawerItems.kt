@@ -172,15 +172,15 @@ fun NavigationDrawerItems(
     NavigationDrawerItem(
         icon = {
             Icon(
-                imageVector = Icons.Default.Draw,
+                imageVector = Icons.Default.ChangeCircle,
                 contentDescription = "Draw"
             )
         },
-        label = { Text(text = "Draw") },
-        selected = destination?.route == Screens.DrawScreen.route,
+        label = { Text(text = "Unit Converter") },
+        selected = destination?.route == Screens.ConverterScreen.route,
 
         onClick = {
-            navController.navigate(Screens.DrawScreen.route, navOptions {
+            navController.navigate(Screens.ConverterScreen.route, navOptions {
                 popUpTo(Screens.HomeScreen.route) {
                     saveState = true
                 }

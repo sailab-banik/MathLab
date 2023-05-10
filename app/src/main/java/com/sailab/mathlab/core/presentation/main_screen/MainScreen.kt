@@ -18,17 +18,17 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.sailab.mathlab.core.service.NotificationService
 import com.sailab.mathlab.core.presentation.about.AboutScreen
 import com.sailab.mathlab.core.presentation.main_screen.components.DrawerContent
 import com.sailab.mathlab.core.presentation.main_screen.components.Screens
+import com.sailab.mathlab.core.service.NotificationService
+import com.sailab.mathlab.feature_calculator.presentation.coding.CodingCalculator
 import com.sailab.mathlab.feature_calculator.presentation.general.GeneralCalculator
+import com.sailab.mathlab.feature_calculator.presentation.scanner.ScannerScreen
 import com.sailab.mathlab.feature_calculator.presentation.scientific.ScientificCalculator
-import com.sailab.mathlab.feature_draw.presentation.draw.DrawScreen
+import com.sailab.mathlab.feature_calculator.presentation.converter.ConverterScreen
 import com.sailab.mathlab.feature_home.presentation.home.HomeScreen
 import com.sailab.mathlab.feature_notes.presentation.notes.NotesScreen
-import com.sailab.mathlab.feature_calculator.presentation.coding.CodingCalculator
-import com.sailab.mathlab.feature_calculator.presentation.scanner.ScannerScreen
 import kotlinx.coroutines.launch
 
 @ExperimentalMaterial3Api
@@ -87,7 +87,7 @@ fun MainScreen(
                     actions = {
                         IconButton(
                             onClick = {
-                            service.showNotification()
+
                         }) {
                             Icon(
                                 imageVector = Icons.Filled.Notifications,
@@ -123,8 +123,8 @@ fun MainScreen(
                     composable(route = Screens.ScannerScreen.route) {
                         ScannerScreen()
                     }
-                    composable(route = Screens.DrawScreen.route) {
-                        DrawScreen()
+                    composable(route = Screens.ConverterScreen.route) {
+                        ConverterScreen()
                     }
                     composable(route = Screens.AboutScreen.route) {
                         AboutScreen()

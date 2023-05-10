@@ -18,8 +18,8 @@ class ToolsRepository {
             ),
 
             Tools(
-                title = "Draw",
-                icon = Icons.Default.Draw
+                title = "Converter",
+                icon = Icons.Default.ChangeCircle
             ),
 
             Tools(
