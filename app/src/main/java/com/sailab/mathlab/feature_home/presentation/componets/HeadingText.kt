@@ -6,16 +6,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun HeadingText(
-    text: String
+    text: String,
+    startPadding: Dp = 20.dp
 ) {
     Text(
         text = text,
         modifier = Modifier.padding(
-            start = 20.dp,
+            start = startPadding,
             end = 20.dp,
             top = 20.dp,
             bottom = 15.dp
