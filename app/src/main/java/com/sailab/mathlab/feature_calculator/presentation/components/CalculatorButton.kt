@@ -17,6 +17,7 @@ import com.sailab.mathlab.core.presentation.main_screen.components.SuperSubTextS
 fun CalculatorButton(
     symbol: String,
     superScript: String? = "",
+    subScript: String? = "",
     color: ButtonColors,
     onClick: ()-> Unit
 ) {
@@ -33,6 +34,9 @@ fun CalculatorButton(
                     append(symbol)
                     withStyle(superSubTextStyle.superScript) {
                         append(superScript)
+                    }
+                    withStyle(superSubTextStyle.subScript) {
+                        append(subScript)
                     }
             },
             fontSize = MaterialTheme.typography.bodyLarge.fontSize,
