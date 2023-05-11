@@ -7,6 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.navOptions
 import com.sailab.mathlab.util.Screens
 import com.sailab.mathlab.feature_home.domain.model.Tools
 
@@ -26,27 +27,69 @@ fun ToolsItem(
         onClick = {
           when(tools.title) {
               "Notes" -> navController.navigate(
-                  Screens.NotesScreen.route
+                  Screens.NotesScreen.route,
+                  navOptions {
+                      popUpTo(Screens.HomeScreen.route) {
+                          saveState = true
+                      }
+                      this.launchSingleTop = true
+                      this.restoreState = true
+                  }
               )
 
               "Scanner" -> navController.navigate(
-                  Screens.ScannerScreen.route
+                  Screens.ScannerScreen.route,
+                  navOptions {
+                      popUpTo(Screens.HomeScreen.route) {
+                          saveState = true
+                      }
+                      this.launchSingleTop = true
+                      this.restoreState = true
+                  }
               )
 
               "Coding Calculator" -> navController.navigate(
-                  Screens.CodingCalculatorScreen.route
+                  Screens.CodingCalculatorScreen.route,
+                  navOptions {
+                      popUpTo(Screens.HomeScreen.route) {
+                          saveState = true
+                      }
+                      this.launchSingleTop = true
+                      this.restoreState = true
+                  }
               )
 
               "Converter" -> navController.navigate(
-                  Screens.ConverterScreen.route
+                  Screens.ConverterScreen.route,
+                  navOptions {
+                      popUpTo(Screens.HomeScreen.route) {
+                          saveState = true
+                      }
+                      this.launchSingleTop = true
+                      this.restoreState = true
+                  }
               )
 
               "General Calculator" -> navController.navigate(
-                  Screens.GeneralCalculatorScreen.route
+                  Screens.GeneralCalculatorScreen.route,
+                  navOptions {
+                      popUpTo(Screens.HomeScreen.route) {
+                          saveState = true
+                      }
+                      this.launchSingleTop = true
+                      this.restoreState = true
+                  }
               )
 
               "Scientific Calculator" -> navController.navigate(
-                  Screens.ScientificCalculatorScreen.route
+                  Screens.ScientificCalculatorScreen.route,
+                  navOptions {
+                      popUpTo(Screens.HomeScreen.route) {
+                          saveState = true
+                      }
+                      this.launchSingleTop = true
+                      this.restoreState = true
+                  }
               )
           }
         },

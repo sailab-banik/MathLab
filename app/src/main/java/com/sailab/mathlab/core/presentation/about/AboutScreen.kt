@@ -30,15 +30,20 @@ fun AboutScreen() {
     val techStackData = techStackRepository.getTechStackData()
 
     val featuresList = listOf(
+        "Intuitive UI",
+        "Navigation Drawer with Gestures",
         "General Calculator",
         "Scientific Calculator",
         "Programmer Calculator",
         "Unit Converter",
         "Scanner Calculator",
-        "Writing and Saving Notes"
+        "Writing and Saving Notes",
+        "Read Math Books",
+        "Read About Mathematicians",
+        "Dynamic Colors for API 32 or Above",
+        "Searching",
+        "Notification"
     )
-
-
 
     LazyColumn(
         modifier = Modifier
@@ -53,7 +58,17 @@ fun AboutScreen() {
 
             item {
                 Text(
-                    text = "MathLab is a mathematical tool build in Android Platform using Android Jetpack Compose. It uses latest Material 3 Designing with Dynamic Color Scheme. This project is build on MVVM Clean Architecture with Room Database.",
+                    text = "MathLab is an innovative Android app designed to solve complex mathematical problems with ease. Built on MVVM Clean Architecture, MathLab provides an intuitive user interface that allows users to navigate through a range of features effortlessly.\n" +
+                            "\n" +
+                            "With its powerful features, MathLab provides an all-in-one solution for your mathematical needs. The app includes a General Calculator, Scientific Calculator, and Coding Calculator to help users solve simple to complex mathematical problems. Additionally, the app includes a Scan to Calculate feature, allowing users to capture equations and instantly solve them.\n" +
+                            "\n" +
+                            "MathLab also includes a Unit Converter, Note Writing and saving, and a library of math books and information about mathematicians. Users can access dynamic colors for API 32 or above to customize their experience.\n" +
+                            "\n" +
+                            "The app is built using the latest technology stack, including Android Studio, Kotlin, Jetpack Compose, Material 3, Dagger Hilt for Dependency Injection, Coil Compose for Asynchronous Image Loading, ML Kit for Text Recognition. These technologies enable MathLab to deliver a fast and efficient performance, making it a top choice for anyone who needs quick and accurate math solutions.\n" +
+                            "\n" +
+                            "The perks of MathLab Android App are numerous. It is accessible on-the-go and available anytime, anywhere, making it a convenient tool for students, professionals, and anyone who needs quick access to mathematical solutions. It provides a range of features that cater to a variety of mathematical needs, from simple calculations to complex problem-solving. Furthermore, with its intuitive UI and dynamic colors, MathLab is a pleasure to use.\n" +
+                            "\n" +
+                            "In conclusion, MathLab is an exceptional Android app that provides a comprehensive solution to all your mathematical needs. With its user-friendly interface, advanced features, and top-notch performance, MathLab is a must-have tool for anyone who needs quick and accurate mathematical solutions.\n",
                     fontSize = aboutFontSize,
                     textAlign = TextAlign.Justify
                 )

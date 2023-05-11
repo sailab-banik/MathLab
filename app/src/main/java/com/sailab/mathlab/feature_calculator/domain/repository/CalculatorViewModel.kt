@@ -1,10 +1,10 @@
-package com.sailab.mathlab.feature_calculator.data.repository
+package com.sailab.mathlab.feature_calculator.domain.repository
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.sailab.mathlab.feature_calculator.data.data_source.CalculatorState
+import com.sailab.mathlab.feature_calculator.domain.model.CalculatorState
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorAction
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorOperation
 
