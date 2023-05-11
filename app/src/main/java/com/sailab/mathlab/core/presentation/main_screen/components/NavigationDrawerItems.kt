@@ -25,12 +25,14 @@ fun NavigationDrawerItems(
     val scope = rememberCoroutineScope()
     val currentBackStackEntryAsState = navController.currentBackStackEntryAsState()
     val destination = currentBackStackEntryAsState.value?.destination
+    val iconTint = MaterialTheme.colorScheme.primary
 
     NavigationDrawerItem(
         icon = {
             Icon(
                 imageVector = Icons.Filled.Home,
-                contentDescription = "Home Icon"
+                contentDescription = "Home Icon",
+                tint = iconTint
             )
         },
         label = {
@@ -62,7 +64,8 @@ fun NavigationDrawerItems(
         icon = {
             Icon(
                 imageVector = Icons.Default.Calculate,
-                contentDescription = "General Calculator"
+                contentDescription = "General Calculator",
+                tint = iconTint
             )
         },
         label = { Text(text = "General Calculator") },
@@ -90,7 +93,8 @@ fun NavigationDrawerItems(
         icon = {
             Icon(
                 imageVector = Icons.Default.Science,
-                contentDescription = "Scientific Calculator"
+                contentDescription = "Scientific Calculator",
+                tint = iconTint
             )
         },
         label = { Text(text = "Scientific Calculator") },
@@ -118,7 +122,8 @@ fun NavigationDrawerItems(
         icon = {
             Icon(
                 imageVector = Icons.Default.Code,
-                contentDescription = "Programmer Calculator"
+                contentDescription = "Programmer Calculator",
+                tint = iconTint
             )
         },
         label = { Text(text = "Coding Calculator") },
@@ -146,7 +151,8 @@ fun NavigationDrawerItems(
         icon = {
             Icon(
                 imageVector = Icons.Default.PhotoCamera,
-                contentDescription = "Scanner"
+                contentDescription = "Scanner",
+                tint = iconTint
             )
         },
         label = { Text(text = "Scanner") },
@@ -174,7 +180,8 @@ fun NavigationDrawerItems(
         icon = {
             Icon(
                 imageVector = Icons.Default.ChangeCircle,
-                contentDescription = "Draw"
+                contentDescription = "Draw",
+                tint = iconTint
             )
         },
         label = { Text(text = "Unit Converter") },
@@ -202,7 +209,8 @@ fun NavigationDrawerItems(
         icon = {
             Icon(
                 imageVector = Icons.Default.StickyNote2,
-                contentDescription = "Notes"
+                contentDescription = "Notes",
+                tint = iconTint
             )
         },
         label = { Text(text = "Notes") },
@@ -230,7 +238,8 @@ fun NavigationDrawerItems(
         icon = {
             Icon(
                 imageVector = Icons.Default.Info,
-                contentDescription = "About"
+                contentDescription = "About",
+                tint = iconTint
             )
         },
         label = { Text(text = "About") },
