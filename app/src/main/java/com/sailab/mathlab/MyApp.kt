@@ -8,6 +8,9 @@ import android.content.Context
 import android.os.Build
 import com.sailab.mathlab.core.service.NotificationService
 
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
 class MyApp: Application() {
     override fun onCreate() {
         super.onCreate()

@@ -1,4 +1,4 @@
-package com.sailab.mathlab.core.presentation.main_screen.components
+package com.sailab.mathlab.util
 
 sealed class Screens(val route: String) {
     object HomeScreen: Screens("home_screen")
@@ -9,4 +9,5 @@ sealed class Screens(val route: String) {
     object ConverterScreen: Screens("converter_screen")
     object AboutScreen: Screens("about_screen")
     object NotesScreen: Screens("notes_screen")
+    object AddEditNotesScreen: Screens("add_edit_notes_screen")
 }

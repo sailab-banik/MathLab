@@ -15,12 +15,15 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import com.sailab.mathlab.core.presentation.main_screen.MainScreen
 import com.sailab.mathlab.ui.theme.MathLabTheme
+import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.debounce
 
 @FlowPreview
 @OptIn(ExperimentalMaterial3Api::class)
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private val prefs by lazy {

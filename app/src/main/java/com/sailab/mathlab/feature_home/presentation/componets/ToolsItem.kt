@@ -7,7 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.sailab.mathlab.core.presentation.main_screen.components.Screens
+import com.sailab.mathlab.util.Screens
 import com.sailab.mathlab.feature_home.domain.model.Tools
 
 @ExperimentalMaterial3Api

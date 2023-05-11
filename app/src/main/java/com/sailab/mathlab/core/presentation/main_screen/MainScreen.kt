@@ -15,20 +15,23 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.sailab.mathlab.core.presentation.about.AboutScreen
 import com.sailab.mathlab.core.presentation.main_screen.components.DrawerContent
-import com.sailab.mathlab.core.presentation.main_screen.components.Screens
 import com.sailab.mathlab.core.service.NotificationService
 import com.sailab.mathlab.feature_calculator.presentation.coding.CodingCalculator
+import com.sailab.mathlab.feature_calculator.presentation.converter.ConverterScreen
 import com.sailab.mathlab.feature_calculator.presentation.general.GeneralCalculator
 import com.sailab.mathlab.feature_calculator.presentation.scanner.ScannerScreen
 import com.sailab.mathlab.feature_calculator.presentation.scientific.ScientificCalculator
-import com.sailab.mathlab.feature_calculator.presentation.converter.ConverterScreen
 import com.sailab.mathlab.feature_home.presentation.home.HomeScreen
+import com.sailab.mathlab.feature_notes.presentation.add_edit_notes.AddEditNotesScreen
 import com.sailab.mathlab.feature_notes.presentation.notes.NotesScreen
+import com.sailab.mathlab.util.Screens
 import kotlinx.coroutines.launch
 
 @ExperimentalMaterial3Api
@@ -130,7 +133,34 @@ fun MainScreen(
                         AboutScreen()
                     }
                     composable(route = Screens.NotesScreen.route) {
-                        NotesScreen()
+                        NotesScreen(
+                            navController = navController
+                        )
+                    }
+
+                    composable(
+                        route = Screens.AddEditNotesScreen.route +
+                                "?noteId={noteId}&noteColor={noteColor}",
+                        arguments = listOf(
+                            navArgument(
+                                name = "noteId"
+                            ) {
+                                type = NavType.IntType
+                                defaultValue = -1
+                            },
+                            navArgument(
+                                name = "noteColor"
+                            ) {
+                                type = NavType.IntType
+                                defaultValue = -1
+                            },
+                        )
+                    ) {
+                        val color = it.arguments?.getInt("noteColor") ?: -1
+                        AddEditNotesScreen(
+                            navController = navController,
+                            noteColor = color
+                        )
                     }
                 }
             }
