@@ -13,7 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.sailab.mathlab.feature_calculator.domain.repository.CalculatorViewModel
+import com.sailab.mathlab.feature_calculator.presentation.CalculatorViewModel
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorAction
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorOperation
 import com.sailab.mathlab.feature_calculator.presentation.components.CalculatorButton
@@ -219,7 +219,7 @@ fun GeneralCalculator() {
                         symbol = "+/-",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Subtract))
+                            viewModel.onAction(CalculatorAction.PlusMinus)
                         }
                     )
                 }

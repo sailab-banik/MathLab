@@ -1,5 +1,7 @@
 package com.sailab.mathlab.feature_home.presentation.componets
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -10,22 +12,29 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.sailab.mathlab.feature_home.domain.model.HomeBooks
+
 
 @ExperimentalMaterial3Api
 @Composable
 fun HomeBooksItem(
     books: HomeBooks
 ) {
+    val context = LocalContext.current
+
     ElevatedCard(
         modifier = Modifier
             .size(
                 194.dp
             )
             .padding(10.dp),
-        onClick = {},
+        onClick = {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(books.link))
+            context.startActivity(intent)
+        },
         colors = CardDefaults.elevatedCardColors(),
         elevation = CardDefaults.cardElevation(
             defaultElevation = 4.dp,

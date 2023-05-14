@@ -8,4 +8,11 @@ sealed class CalculatorOperation(
     object Multiply: CalculatorOperation("×")
     object Divide: CalculatorOperation("÷")
     object Percentage: CalculatorOperation("%")
+    object Modulus: CalculatorOperation("mod")
+    object And: CalculatorOperation("&")
+    object Or: CalculatorOperation("|")
+    object Xor: CalculatorOperation("^")
+    object RightShift: CalculatorOperation(">>")
+    object LeftShift: CalculatorOperation("<<")
+    object PowerToY: CalculatorOperation("^")
 }

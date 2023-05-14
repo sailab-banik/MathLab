@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.sailab.mathlab.core.presentation.main_screen.components.WindowInfo
 import com.sailab.mathlab.core.presentation.main_screen.components.rememberWindowInfo
-import com.sailab.mathlab.feature_calculator.domain.repository.CalculatorViewModel
+import com.sailab.mathlab.feature_calculator.presentation.CalculatorViewModel
 
 @ExperimentalMaterial3Api
 @Composable

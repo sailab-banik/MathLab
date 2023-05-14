@@ -7,7 +7,8 @@ class HomeBooksRepository {
         return listOf(
             HomeBooks(
                 title = "Math Magic",
-                description = "NCERT Class 1"
+                description = "NCERT Class 1",
+                link = "https://drive.google.com/file/d/1jSH_yDpDT3rSbVjW4tNSK98zubVqKZUo/view?usp=share_link"
             ),
 
             HomeBooks(

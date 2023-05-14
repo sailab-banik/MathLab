@@ -13,9 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.sailab.mathlab.feature_calculator.domain.repository.CalculatorViewModel
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorAction
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorOperation
+import com.sailab.mathlab.feature_calculator.presentation.CalculatorViewModel
 import com.sailab.mathlab.feature_calculator.presentation.components.CalculatorButton
 import com.sailab.mathlab.feature_calculator.presentation.components.CalculatorTextField
 
@@ -63,7 +63,7 @@ fun ScientificCalculator() {
                             MaterialTheme.colorScheme.errorContainer
                         ),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Delete)
+                           viewModel.onAction(CalculatorAction.Pi)
                         }
                     )
                 }
@@ -75,7 +75,7 @@ fun ScientificCalculator() {
                             MaterialTheme.colorScheme.errorContainer
                         ),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Delete)
+                            viewModel.onAction(CalculatorAction.Exponent)
                         }
                     )
                 }
@@ -109,7 +109,7 @@ fun ScientificCalculator() {
                         symbol = "sin",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Sin)
                         }
                     )
                 }
@@ -120,7 +120,7 @@ fun ScientificCalculator() {
                         superScript = "y",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.PowerToY))
                         }
                     )
                 }
@@ -131,7 +131,7 @@ fun ScientificCalculator() {
                         superScript = "2",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Square)
                         }
                     )
                 }
@@ -141,7 +141,7 @@ fun ScientificCalculator() {
                         symbol = "√",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Root)
                         }
                     )
                 }
@@ -163,7 +163,7 @@ fun ScientificCalculator() {
                         symbol = "cos",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Cos)
                         }
                     )
                 }
@@ -215,7 +215,7 @@ fun ScientificCalculator() {
                         symbol = "tan",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(4))
+                            viewModel.onAction(CalculatorAction.Tan)
                         }
                     )
                 }
@@ -267,7 +267,7 @@ fun ScientificCalculator() {
                         symbol = "log",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Log)
                         }
                     )
                 }
@@ -319,7 +319,7 @@ fun ScientificCalculator() {
                         symbol = "ln",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Ln)
                         }
                     )
                 }
@@ -329,7 +329,7 @@ fun ScientificCalculator() {
                         symbol = "+/-",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Subtract))
+                            viewModel.onAction(CalculatorAction.PlusMinus)
                         }
                     )
                 }

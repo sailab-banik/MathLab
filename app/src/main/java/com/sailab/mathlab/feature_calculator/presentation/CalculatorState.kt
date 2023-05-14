@@ -1,4 +1,4 @@
-package com.sailab.mathlab.feature_calculator.domain.model
+package com.sailab.mathlab.feature_calculator.presentation
 
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorOperation
 

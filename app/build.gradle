@@ -57,6 +57,7 @@ dependencies {
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation 'androidx.compose.material3:material3:1.0.0-alpha11'
     implementation 'androidx.navigation:navigation-runtime-ktx:2.5.3'
+    implementation 'androidx.camera:camera-core:1.0.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -87,6 +88,10 @@ dependencies {
 
     // Coil Compose
     implementation "io.coil-kt:coil-compose:2.3.0"
+
+    implementation 'org.mariuszgromada.math:MathParser.org-mXparser:5.2.1'
+
+    implementation 'com.google.mlkit:text-recognition:16.0.0'
 }
 
 // Allow references to generated code

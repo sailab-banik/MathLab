@@ -13,7 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.sailab.mathlab.feature_calculator.domain.repository.CalculatorViewModel
+import com.sailab.mathlab.feature_calculator.presentation.CalculatorViewModel
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorAction
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorOperation
 import com.sailab.mathlab.feature_calculator.presentation.components.CalculatorButton
@@ -63,7 +63,7 @@ fun CodingCalculator() {
                             MaterialTheme.colorScheme.errorContainer
                         ),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Delete)
+                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.LeftShift))
                         }
                     )
                 }
@@ -75,7 +75,7 @@ fun CodingCalculator() {
                             MaterialTheme.colorScheme.errorContainer
                         ),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Delete)
+                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.RightShift))
                         }
                     )
                 }
@@ -110,7 +110,7 @@ fun CodingCalculator() {
                         symbol = "&",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.And))
                         }
                     )
                 }
@@ -120,7 +120,7 @@ fun CodingCalculator() {
                         symbol = "bin",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.DecToBin)
                         }
                     )
                 }
@@ -130,7 +130,7 @@ fun CodingCalculator() {
                         symbol = "hex",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.DecToHex)
                         }
                     )
                 }
@@ -140,7 +140,7 @@ fun CodingCalculator() {
                         symbol = "oct",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.DecToOct)
                         }
                     )
                 }
@@ -162,7 +162,7 @@ fun CodingCalculator() {
                         symbol = "|",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Or))
                         }
                     )
                 }
@@ -214,7 +214,7 @@ fun CodingCalculator() {
                         symbol = "~",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(4))
+                            viewModel.onAction(CalculatorAction.Not)
                         }
                     )
                 }
@@ -266,7 +266,7 @@ fun CodingCalculator() {
                         symbol = "^",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Xor))
                         }
                     )
                 }
@@ -319,7 +319,7 @@ fun CodingCalculator() {
                         subScript = "m",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Number(7))
+                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Modulus))
                         }
                     )
                 }
@@ -329,7 +329,7 @@ fun CodingCalculator() {
                         symbol = "+/-",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Subtract))
+                            viewModel.onAction(CalculatorAction.PlusMinus)
                         }
                     )
                 }
