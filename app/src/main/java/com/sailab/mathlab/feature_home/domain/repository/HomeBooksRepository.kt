@@ -32,7 +32,7 @@ class HomeBooksRepository {
             HomeBooks(
                 title = "Math Magic",
                 description = "NCERT Class 5",
-                link = "https://drive.google.com/file/d/1svAcL0ddAdFrP50YJDJNcNL1IWV5CBSa/view?usp=share_link"
+                link = "https://drive.google.com/file/d/1HNfMXn-YvYkDMHExBvvwJTlgPfLVov5M/view?usp=share_link"
             ),
 
             HomeBooks(

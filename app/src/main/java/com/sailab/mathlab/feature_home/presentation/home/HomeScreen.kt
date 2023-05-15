@@ -35,7 +35,7 @@ fun HomeScreen(
     LazyColumn(
         content = {
             item {
-                Search()
+                Search(navController = navController)
             }
 
             item {
