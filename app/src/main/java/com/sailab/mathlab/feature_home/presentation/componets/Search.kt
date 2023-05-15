@@ -10,7 +10,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.KeyboardVoice
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -55,7 +54,7 @@ fun Search(
             placeholder = {
                 Text(text = "Search")
             },
-            leadingIcon = {
+            trailingIcon = {
                 IconButton(onClick = {
                     when(text.lowercase()) {
                         in setOf("general calculator", "calculator", "general") -> navController.navigate(
@@ -184,13 +183,7 @@ fun Search(
                     )
                 }
             },
-            trailingIcon = {
-                IconButton(onClick = { /*TODO*/ }) {
-                    Icon(
-                        imageVector = Icons.Default.KeyboardVoice,
-                        contentDescription = "Voice")
-                }
-            },
+
             colors = TextFieldDefaults.textFieldColors(
                 focusedIndicatorColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Transparent
@@ -317,7 +310,7 @@ fun Search(
                         }
 
                         else -> scope.launch {
-                            Toast.makeText(context, "Keyword not found", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Not Found", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
