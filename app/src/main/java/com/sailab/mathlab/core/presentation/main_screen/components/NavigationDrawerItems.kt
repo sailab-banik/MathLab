@@ -180,11 +180,11 @@ fun NavigationDrawerItems(
         icon = {
             Icon(
                 imageVector = Icons.Default.ChangeCircle,
-                contentDescription = "Draw",
+                contentDescription = "Converter",
                 tint = iconTint
             )
         },
-        label = { Text(text = "Unit Converter") },
+        label = { Text(text = "Converter") },
         selected = destination?.route == Screens.ConverterScreen.route,
 
         onClick = {
