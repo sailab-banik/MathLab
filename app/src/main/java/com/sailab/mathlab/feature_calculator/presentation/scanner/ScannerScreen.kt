@@ -3,7 +3,6 @@ package com.sailab.mathlab.feature_calculator.presentation.scanner
 import android.graphics.Bitmap
 import android.graphics.ImageDecoder
 import android.net.Uri
-import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.launch
@@ -23,14 +22,12 @@ import androidx.compose.ui.unit.dp
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
-import kotlinx.coroutines.launch
 import org.mariuszgromada.math.mxparser.Expression
 
 
 @Composable
 fun ScannerScreen() {
     val context = LocalContext.current
-    val scope = rememberCoroutineScope()
     var imageUri by remember { mutableStateOf<Uri?>(null) }
     var bitmap by remember { mutableStateOf<Bitmap?>(null) }
     val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
@@ -123,9 +120,11 @@ fun ScannerScreen() {
                     fontSize = MaterialTheme.typography.displaySmall.fontSize
                 )
             } else {
-                scope.launch {
-                    Toast.makeText(context, "Please Try Again", Toast.LENGTH_SHORT).show()
-                }
+                Text(
+                    text = "Please Try Again",
+                    modifier = Modifier.padding(40.dp),
+                    fontSize = MaterialTheme.typography.displaySmall.fontSize
+                )
             }
         }
     }
