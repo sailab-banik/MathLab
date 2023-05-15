@@ -13,13 +13,8 @@ class ToolsRepository {
             ),
 
             Tools(
-                title = "Scanner",
-                icon = Icons.Default.PhotoCamera
-            ),
-
-            Tools(
-                title = "Converter",
-                icon = Icons.Default.ChangeCircle
+                title = "Coding Calculator",
+                icon = Icons.Default.Code
             ),
 
             Tools(
@@ -28,13 +23,18 @@ class ToolsRepository {
             ),
 
             Tools(
-                title = "Coding Calculator",
-                icon = Icons.Default.Code
+                title = "Scientific Calculator",
+                icon = Icons.Default.Science
             ),
 
             Tools(
-                title = "Scientific Calculator",
-                icon = Icons.Default.Science
+                title = "Scanner",
+                icon = Icons.Default.PhotoCamera
+            ),
+
+            Tools(
+                title = "Converter",
+                icon = Icons.Default.ChangeCircle
             )
         )
     }
