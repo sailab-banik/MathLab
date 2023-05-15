@@ -39,7 +39,7 @@ fun HomeScreen(
             }
 
             item {
-                HomeChips()
+                HomeChips(navController = navController)
             }
 
             item {
