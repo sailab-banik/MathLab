@@ -15,6 +15,7 @@ import com.sailab.mathlab.core.presentation.main_screen.components.SuperSubTextS
 
 @Composable
 fun CalculatorButton(
+    enable: Boolean = true,
     symbol: String,
     superScript: String? = "",
     subScript: String? = "",
@@ -26,6 +27,7 @@ fun CalculatorButton(
         modifier = Modifier
             .size(80.dp),
         colors = color,
+        enabled = enable,
         shape = CircleShape,
         onClick = onClick
     ) {

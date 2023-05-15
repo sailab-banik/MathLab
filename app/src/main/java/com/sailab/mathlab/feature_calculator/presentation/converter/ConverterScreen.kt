@@ -1,37 +1,42 @@
 package com.sailab.mathlab.feature_calculator.presentation.converter
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.Text
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.sailab.mathlab.feature_calculator.presentation.CalculatorViewModel
 import com.sailab.mathlab.feature_calculator.domain.util.CalculatorAction
-import com.sailab.mathlab.feature_calculator.domain.util.CalculatorOperation
+import com.sailab.mathlab.feature_calculator.presentation.CalculatorViewModel
 import com.sailab.mathlab.feature_calculator.presentation.components.CalculatorButton
 import com.sailab.mathlab.feature_calculator.presentation.components.CalculatorTextField
-import com.sailab.mathlab.feature_calculator.presentation.components.ConverterRadioButtons
-import com.sailab.mathlab.feature_calculator.presentation.components.DropDown
 
 @ExperimentalMaterial3Api
 @Composable
 fun ConverterScreen() {
     val viewModel = viewModel<CalculatorViewModel>()
+    var text by remember { mutableStateOf("Celsius") }
+
     Column(modifier = Modifier.fillMaxSize()) {
-        ConverterRadioButtons()
+        Text(
+            text = "Temperature",
+            modifier = Modifier.padding(start = 20.dp, bottom = 10.dp),
+            fontSize = MaterialTheme.typography.headlineMedium.fontSize,
+            fontWeight = FontWeight.Bold
+        )
 
-        DropDown()
+        Text(text = text, modifier = Modifier.padding(start = 20.dp, bottom = 10.dp))
 
-        CalculatorTextField(minHeight = 32.dp, horizontalPadding = 20.dp)
-
-        DropDown()
-
-        CalculatorTextField(minHeight = 32.dp, horizontalPadding = 20.dp)
+        CalculatorTextField(minHeight = 240.dp, horizontalPadding = 20.dp)
 
         LazyVerticalGrid(
             columns = GridCells.Fixed(4),
@@ -159,12 +164,14 @@ fun ConverterScreen() {
 
                 item {
                     CalculatorButton(
-                        symbol = "↑",
+                        enable = text == "Celsius",
+                        symbol = "F",
                         color = ButtonDefaults.elevatedButtonColors(
                             MaterialTheme.colorScheme.errorContainer
                         ),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Add))
+                            viewModel.onAction(CalculatorAction.ConvertToFahr)
+                            text = "Fahrenheit"
                         }
                     )
                 }
@@ -174,7 +181,7 @@ fun ConverterScreen() {
                         symbol = "+/-",
                         color = ButtonDefaults.elevatedButtonColors(),
                         onClick = {
-                            viewModel.onAction(CalculatorAction.Operation(CalculatorOperation.Subtract))
+                            viewModel.onAction(CalculatorAction.PlusMinus)
                         }
                     )
                 }
@@ -201,12 +208,14 @@ fun ConverterScreen() {
 
                 item {
                     CalculatorButton(
-                        symbol = "↓",
+                        enable = text == "Fahrenheit",
+                        symbol = "C",
                         color = ButtonDefaults.elevatedButtonColors(
                             MaterialTheme.colorScheme.errorContainer
                         ),
                         onClick = {
-                            //viewModel.onAction(CalculatorAction.Calculate)
+                            viewModel.onAction(CalculatorAction.ConvertToCel)
+                            text = "Celsius"
                         }
                     )
                 }

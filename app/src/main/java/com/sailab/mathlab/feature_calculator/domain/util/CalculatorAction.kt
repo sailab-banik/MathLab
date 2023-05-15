@@ -21,4 +21,6 @@ sealed class CalculatorAction{
     object Ln: CalculatorAction()
     object Square: CalculatorAction()
     object Root: CalculatorAction()
+    object ConvertToFahr: CalculatorAction()
+    object ConvertToCel: CalculatorAction()
 }

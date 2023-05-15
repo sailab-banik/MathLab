@@ -33,6 +33,28 @@ class CalculatorViewModel: ViewModel() {
             is CalculatorAction.Ln -> performLn()
             is CalculatorAction.Square -> performSquare()
             is CalculatorAction.Root -> performRoot()
+            is CalculatorAction.ConvertToFahr -> convertToFahr()
+            is CalculatorAction.ConvertToCel -> convertToCel()
+        }
+    }
+
+    private fun convertToCel() {
+        state = if (state.number1.isNotBlank()) {
+            state.copy(
+                number1 = (5.0/9.0 * (state.number1.toDouble() - 32)).toString()
+            )
+        } else {
+            state
+        }
+    }
+
+    private fun convertToFahr() {
+        state = if (state.number1.isNotBlank()) {
+            state.copy(
+                number1 = ((state.number1.toDouble() * 9/5) + 32).toString()
+            )
+        } else {
+            state
         }
     }
 
