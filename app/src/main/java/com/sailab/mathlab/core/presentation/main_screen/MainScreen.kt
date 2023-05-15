@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notes
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
@@ -84,17 +83,6 @@ fun MainScreen(
                             Icon(
                                 imageVector = Icons.Filled.Notes,
                                 contentDescription = "Menu Icon"
-                            )
-                        }
-                    },
-                    actions = {
-                        IconButton(
-                            onClick = {
-
-                        }) {
-                            Icon(
-                                imageVector = Icons.Filled.Notifications,
-                                contentDescription = "Notification Icon"
                             )
                         }
                     }
