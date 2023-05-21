@@ -46,19 +46,19 @@
   <h2>Outputs 🖨️</h2>
   <table>
     <tr>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/64bbdc8c-a82a-4468-b070-c80340062f1c" alt="Image 1"></td>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/44a27ae5-1289-4f40-9a2e-e19d211f9ae7" alt="Image 2"></td>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/0bfe1f93-2409-405f-a6f3-3a5da5add848" alt="Image 3"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/3a694600-6a4d-4af5-9cf6-39cb4296bf65" alt="Image 1"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/4d3d9106-c9a4-4dd1-88e6-f37d883b6395" alt="Image 2"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/c4024a87-58f7-42b7-9dbe-ff29d01aaea7" alt="Image 3"></td>
     </tr>
      <tr>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/ccdae83c-ae48-430d-a6c5-1c6c2970938d" alt="Image 4"></td>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/50399ceb-fcde-451c-8e74-e57a86426da8" alt="Image 5"></td>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/e419955e-9889-4cea-a1f5-d4a34b4b85d8" alt="Image 6"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/001e35de-5c78-49fe-b049-b5c4944c7292" alt="Image 4"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/6e0f3488-f691-4d60-abbf-2c55c62b833f" alt="Image 5"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/e3e602b0-596a-4f9b-80fd-7f2aa87d25b2" alt="Image 6"></td>
     </tr>
     <tr>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/8d824cca-7e63-42cc-b4bc-76146de51fa6" alt="Image 7"></td>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/b9d87048-a21e-42f3-856d-3d99f54844ce" alt="Image 8"></td>
-      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/a7b70aa5-51dc-415a-b9c5-851aa6b08f5b" alt="Image 9"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/d80b604d-e1bc-4592-a61e-93af3d4f35d9" alt="Image 7"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/e2cbef9f-42dc-4e8a-9c3f-5993b06d696e" alt="Image 8"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/84da6867-6a8c-43b3-8bab-c186b6579d83" alt="Image 9"></td>
     </tr>
   </table>
   
