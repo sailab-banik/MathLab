@@ -64,10 +64,10 @@
   
   
   <h2>Contributing 👥</h2>
-  <p>If you'd like to contribute to MathLab, please follow the guidelines and instructions in the CONTRIBUTING.md file of the project repository.</p>
+  <p>If you'd like to contribute to MathLab, please follow the guidelines and instructions in the <a href="https://github.com/sailab-banik/MathLab/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> file of the project repository.</p>
   
   <h2>License 📄</h2>
-  <p>This project is licensed under the Apache 2.0 License. For more details, refer to the LICENSE.md file in the project repository.</p>
+  <p>This project is licensed under the Apache 2.0 License. For more details, see the <a href="https://github.com/sailab-banik/MathLab/blob/master/LICENSE">LICENSE.md</a> file.</p>
 </body>
 </html>
 
