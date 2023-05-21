@@ -43,6 +43,26 @@
   <h2>Usage 🚀</h2>
   <p>To use MathLab, simply install the app on your Android device from the Google Play Store or any other reliable source. Once installed, launch the app and explore the various features provided. You can access the General Calculator, Scientific Calculator, Coding Calculator, Unit Converter, Note Writing and Saving, and the Math Books Library. Additionally, utilize the Scan to Calculate feature to instantly solve captured equations.</p>
   
+  <h2>Outputs 🖨️</h2>
+  <table>
+    <tr>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/64bbdc8c-a82a-4468-b070-c80340062f1c" alt="Image 1"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/44a27ae5-1289-4f40-9a2e-e19d211f9ae7" alt="Image 2"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/0bfe1f93-2409-405f-a6f3-3a5da5add848" alt="Image 3"></td>
+    </tr>
+     <tr>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/ccdae83c-ae48-430d-a6c5-1c6c2970938d" alt="Image 4"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/50399ceb-fcde-451c-8e74-e57a86426da8" alt="Image 5"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/e419955e-9889-4cea-a1f5-d4a34b4b85d8" alt="Image 6"></td>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/8d824cca-7e63-42cc-b4bc-76146de51fa6" alt="Image 7"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/b9d87048-a21e-42f3-856d-3d99f54844ce" alt="Image 8"></td>
+      <td><img src="https://github.com/sailab-banik/MathLab/assets/85576283/a7b70aa5-51dc-415a-b9c5-851aa6b08f5b" alt="Image 9"></td>
+    </tr>
+  </table>
+  
+  
   <h2>Contributing 👥</h2>
   <p>If you'd like to contribute to MathLab, please follow the guidelines and instructions in the CONTRIBUTING.md file of the project repository.</p>
   
