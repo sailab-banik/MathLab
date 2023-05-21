@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,6 +50,4 @@
   <p>This project is licensed under the Apache 2.0 License. For more details, refer to the LICENSE.md file in the project repository.</p>
 </body>
 </html>
-```
 
-Please note that the emojis used here are for illustrative purposes, and you can modify them or add/remove as per your preference. Also, ensure that you provide the appropriate license file along with your project, adhering to the terms of the Apache 2.0 License.
