@@ -4,7 +4,7 @@
   
 </head>
 <body>
-  <h1>MathLab Android App 🧮</h1>
+  <h1 align="center">MathLab Android App 🧮</h1>
   
   <h2>Description</h2>
   <p>MathLab is an innovative Android app designed to solve complex mathematical problems with ease. Built on MVVM Clean Architecture, MathLab provides an intuitive user interface that allows users to navigate through a range of features effortlessly.</p>
